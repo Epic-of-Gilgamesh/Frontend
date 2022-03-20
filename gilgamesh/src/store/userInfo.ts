@@ -1,14 +1,14 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import type { RootState } from './index'
 
-interface UserInfoState {
+export interface IUserInfoState {
     id: string,
     firstName: string,
     lastName: string,
     role: number
 }
 
-const initialState: UserInfoState = {
+let initialState: IUserInfoState = {
     id: "",
     firstName: "",
     lastName: "",
@@ -25,7 +25,7 @@ export const userInfoSlice = createSlice({
     name: 'userInfo',
     initialState,
     reducers: {
-        setUserInfo(state, action: PayloadAction<UserInfoState>){
+        setUserInfo(state, action: PayloadAction<IUserInfoState>){
             state.id = action.payload.id;
             state.firstName = action.payload.firstName;
             state.lastName = action.payload.lastName;
