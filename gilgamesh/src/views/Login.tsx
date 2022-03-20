@@ -1,7 +1,13 @@
 import React from 'react';
+import store from '../store/index';
+import { useNavigate } from "react-router-dom";
 
-export class LoginPage extends React.Component<any, any>{
-    render() {
-        return <h1>{this.props.title}</h1>
-    }
+function LoginPage(props: any){
+
+    return <div>
+            props.name
+    </div>
+    ;
 }
+
+export default LoginPage;
